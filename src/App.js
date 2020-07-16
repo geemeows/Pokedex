@@ -1,10 +1,23 @@
 import React from 'react';
+import DefaultLayout from '@layouts'
+import { createGlobalStyle } from 'styled-components'
 
-function App() {
+const GlobalStyles = createGlobalStyle`
+    h1, h2, h3, h4, h5, p, span {
+      font-family: 'Source Sans Pro', sans-serif;
+
+    }
+`
+
+
+const App = () => {
   return (
-    <div className="App">
-      Hello World
-    </div>
+      <React.Fragment>
+        <GlobalStyles />
+        <DefaultLayout>
+            <p>Hello World</p>
+        </DefaultLayout>
+      </React.Fragment>
   );
 }
 
