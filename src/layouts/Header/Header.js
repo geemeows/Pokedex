@@ -4,7 +4,8 @@ import Container from '@components/UI/Container'
 
 const HeaderContainer = styled.header`
     background: #e5cedc;
-    padding: 20px
+    padding: 20px;
+    margin-bottom: 20px;
 `
 export const Image = styled.img`
     width: 40px;

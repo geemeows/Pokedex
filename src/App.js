@@ -1,5 +1,6 @@
 import React from 'react';
 import DefaultLayout from '@layouts'
+import Home from '@containers/Home/Home'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
@@ -9,13 +10,12 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 
-
 const App = () => {
   return (
       <React.Fragment>
         <GlobalStyles />
         <DefaultLayout>
-            <p>Hello World</p>
+            <Home />
         </DefaultLayout>
       </React.Fragment>
   );

@@ -6,10 +6,8 @@ import APIContextProvider from '@context/api_context'
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
     <APIContextProvider>
       <App />
-    </APIContextProvider>
-  </React.StrictMode>,
+    </APIContextProvider>,
   document.getElementById('root')
 );
