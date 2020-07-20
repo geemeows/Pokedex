@@ -37,7 +37,7 @@ const CardBody = styled.div`
 
 const NavCard = ({ type, functionality, disabled }) => {
     return (
-        <NavigationCard onClick={functionality}>
+        <NavigationCard onClick={functionality} shadowed={!disabled}>
             <CardBody className={ disabled ? 'disabled' : '' }>
                 {
                     type === 'next' ? (

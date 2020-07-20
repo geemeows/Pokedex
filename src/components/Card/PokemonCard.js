@@ -32,10 +32,12 @@ export const PokemonCard = styled.div`
         display: block;
     }
     &:hover {
-        box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.4)
+        box-shadow: ${({ shadowed }) => shadowed && '3px 3px 7px 0px rgba(0, 0, 0, 0.4)'}
     }
     img.loading {
         max-width: 100%; 
+        display: block;
+        margin: 0 auto;
     }
     img.pokemon {
         display: block;
@@ -46,7 +48,7 @@ export const PokemonCard = styled.div`
     }
 `
 
-const Card = ({ id, charURL, charName, images, weight, height, loading }) => {
+const Card = ({ id, charName, images, weight, height, loading, getPokemon }) => {
     const [currImage, setCurrImage] = useState(0)
     useEffect(() => {
         const fn = () => {
@@ -71,14 +73,14 @@ const Card = ({ id, charURL, charName, images, weight, height, loading }) => {
             <span className="pokemon-info"><strong>ID: </strong>{ id }</span>
             <span className="pokemon-info"><strong>Height: </strong>{ height }″ </span>
             <span className="pokemon-info"><strong>Weight: </strong>{ weight }lb</span>
-            <Button className="pokemon-btn" animated='fade' fluid>
+            <Button className="pokemon-btn" animated='fade' fluid onClick={() => getPokemon(id)}>
                 <Button.Content visible>{charName} profile</Button.Content>
                 <Button.Content hidden>Explore {charName} Abilities Now!</Button.Content>
             </Button>
         </React.Fragment>
     )
     return (
-        <PokemonCard>
+        <PokemonCard shadowed>
             { loading ? (
                 <React.Fragment>
                     <img className='loading' src={loading_pokemons} alt="Pikachu Loading" />
