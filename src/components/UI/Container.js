@@ -12,7 +12,7 @@ const UIContainer = styled.div`
         max-width: 625px;
     }
     @media ${device.mobile} {
-        max-width: 280px;
+        max-width: calc(100% - 25px);
     }
 `
 const Container = ({ children }) => {

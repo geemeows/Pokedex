@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Container from '@components/UI/Container'
 import { Link } from 'react-router-dom'
 
-const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header`
     background: #e5cedc;
     padding: 20px;
     margin-bottom: 20px;

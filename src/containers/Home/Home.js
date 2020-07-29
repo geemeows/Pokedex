@@ -17,8 +17,6 @@ const Home = () => {
     const { push } = useHistory()
 
 
-    console.log('home page')
-
     useEffect(() => {
         (async () => {
             try {                    
@@ -32,6 +30,7 @@ const Home = () => {
             }
         })()
     }, [offset, limit, setPokemons])
+    
     const clearError = useCallback(() => setError(null), [])
 
     const getPokemon = useCallback((id) => {
@@ -56,7 +55,6 @@ const Home = () => {
                         <PokemonCard 
                             id={id} 
                             charName={name} 
-                            charURL={url}
                             images={images}
                             weight={weight}
                             height={height}
