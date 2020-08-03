@@ -5,13 +5,14 @@ dist: trusty
 cache:
   directories:
   - node_modules
-install:
+before_script:
   - yarn
+after_success:
+  - yarn netlify:deploy
 script:
   - yarn lint
   - yarn test
   - yarn build
-  # - yarn netlify:deploy
 deploy:
   provider: netlify
   site: $NETLIFY_SITE_ID
