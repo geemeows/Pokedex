@@ -19,8 +19,10 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "eject": "react-scripts eject",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "netlify:deploy": "netlify deploy --dir=./build -p -m \"$(git log -1 --pretty=%B)\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,6 +52,14 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "netlify-cli": "^2.59.0",
     "react-app-rewire-aliases": "^0.2.0",
     "react-app-rewired": "^2.1.6",
     "react-test-renderer": "^16.13.1"

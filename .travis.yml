@@ -1,10 +1,18 @@
 language: node_js
 node_js:
   - "stable"
+dist: trusty
 cache:
   directories:
   - node_modules
+install:
+  - yarn
 script:
-  - npm lint
-  - npm test
-  - npm run build
+  - yarn lint
+  - yarn test
+  - yarn build
+  # - yarn netlify:deploy
+deploy:
+  provider: netlify
+  site: $NETLIFY_SITE_ID
+  auth: $NETLIFY_AUTH_TOKEN

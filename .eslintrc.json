@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es2020": true,
+        "jest": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "settings": {
+        "import/resolver": {
+            "alias": {
+                "extensions": [".js"],
+                "map": [
+                    ["@components", "./src/components"],
+                    ["@containers", "./src/containers"],
+                    ["@layouts", "./src/layouts"],
+                    ["@services", "./src/core"],
+                    ["@assets", "./src/assets"],
+                    ["@utils", "./src/utils"],
+                    ["@context", "./src/context"]
+                ]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": ["error", "never"],
+        "no-console": ["error", { "allow": ["warn"] }],
+        "import/no-named-as-default": 0,
+        "comma-dangle": ["error", "never"],
+        "react/jsx-filename-extension": [
+            1, 
+            { "extensions": [".js", ".jsx"] }
+        ]
+    }
+}
