@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Container from '@components/UI/Container'
 import { Link } from 'react-router-dom'
 
-export const HeaderContainer = styled.header`
+const HeaderContainer = styled.header`
     background: #e5cedc;
     padding: 20px;
     margin-bottom: 20px;
@@ -30,18 +30,16 @@ const Anchor = styled(Link)`
         color: #EF5350;
     }
 `
-const Header = () => {
-    return (
-        <HeaderContainer className="header">
-            <Container>
-                <Anchor to="/">
-                    <Logo>
-                        <Image src={`${process.env.PUBLIC_URL}/pokemon_logo.svg`} alt="app logo" />
-                        <LogoHeading>Pokédex</LogoHeading>
-                    </Logo>
-                </Anchor>
-            </Container>
-        </HeaderContainer>
-    )
-}
+const Header = () => (
+  <HeaderContainer className="header">
+    <Container>
+      <Anchor to="/">
+        <Logo>
+          <Image src={`${process.env.PUBLIC_URL}/pokemon_logo.svg`} alt="app logo" />
+          <LogoHeading>Pokédex</LogoHeading>
+        </Logo>
+      </Anchor>
+    </Container>
+  </HeaderContainer>
+)
 export default Header

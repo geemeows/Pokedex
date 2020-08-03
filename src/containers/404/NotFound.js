@@ -1,22 +1,24 @@
 import React from 'react'
 import Container from '@components/UI/Container'
 import styled from 'styled-components'
-import pikachu_img from '@assets/pokemon_404.svg'
+import pikachuImg from '@assets/pokemon_404.svg'
 import { Link } from 'react-router-dom'
+import device from '@utils/responsive_helper'
 
 const ContentWrapper = styled.div`
     background: white;
     height: 500px;
     padding: 20px;
     border-radius: 3px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     .not-found {
         font-size: 8em;
-        @media only screen and (max-width: 600px) {
-            font-size: 6em;
+        @media only ${device.mobile} {
+            font-size: 4em;
         }
     }
     p {
@@ -43,20 +45,22 @@ const ContentWrapper = styled.div`
         }
     }
 `
-const NotFound = () => {
-    return (
-        <Container>
-            <ContentWrapper>
-                <div className="image">
-                    <h2>4</h2>
-                    <img src={pikachu_img} alt="pikachu"/>
-                    <h2>4</h2>
-                </div>
-                <h2 className="not-found">Pika Pika :(</h2>
-                <p>The page you are requesting is not found. Return to <Link to="/">Home</Link>?</p>
-            </ContentWrapper>
-        </Container>
-    )
-}
+const NotFound = () => (
+  <Container>
+    <ContentWrapper className="not-found-container">
+      <div className="image">
+        <h2>4</h2>
+        <img src={pikachuImg} alt="pikachu" />
+        <h2>4</h2>
+      </div>
+      <h2 className="not-found">Pika Pika :(</h2>
+      <p>
+        The page you are requesting is not found. Return to
+        <Link to="/">Home</Link>
+        ?
+      </p>
+    </ContentWrapper>
+  </Container>
+)
 
 export default NotFound

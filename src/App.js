@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import DefaultLayout from '@layouts'
 import Home from '@containers/Home/Home'
 import Pokemon from '@containers/Pokemon/Pokemon'
@@ -13,21 +13,19 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 
-const App = () => {
-  return (
-      <React.Fragment>
-        <GlobalStyles />
-        <DefaultLayout>
-            <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/pokemon" component={Pokemon}/>
-              <Route path="/404" component={NotFound} />
-              <Redirect to="/404" />
-            </Switch>
-            {/* <Home /> */}
-        </DefaultLayout>
-      </React.Fragment>
-  );
-}
+const App = () => (
+  <>
+    <GlobalStyles />
+    <DefaultLayout>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/pokemon" component={Pokemon} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
+      </Switch>
+      {/* <Home /> */}
+    </DefaultLayout>
+  </>
+)
 
-export default App;
+export default App
