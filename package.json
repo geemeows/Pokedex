@@ -22,7 +22,7 @@
     "eject": "react-scripts eject",
     "test": "react-app-rewired test",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "netlify:deploy": "netlify deploy --dir=./build -p -m \"$(git log -1 --pretty=%B)\""
+    "netlify:deploy": "netlify deploy --prod --dir=./build -p -m \"$(git log -1 --pretty=%B)\""
   },
   "eslintConfig": {
     "extends": "react-app"
