@@ -9,6 +9,8 @@ before_script:
   - yarn
 after_success:
   - yarn netlify:deploy
+after_failure:
+  - echo "failed ya z3eem"
 script:
   - yarn lint
   - yarn test
