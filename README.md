@@ -1,7 +1,9 @@
-![Travis (.com)](https://img.shields.io/travis/com/Gazouly/Pokedex?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/Gazouly/Pokedex?style=for-the-badge) [![Website pokedex-pokemons.netlify.app](https://img.shields.io/website-up-down-green-red/http/pokedex-pokemons.netlify.app.svg?style=for-the-badge)](https://pokedex-pokemons.netlify.app/) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Gazouly/)
+![Travis (.com)](https://img.shields.io/travis/com/Gazouly/Pokedex) [![Netlify Status](https://api.netlify.com/api/v1/badges/c0e27509-523c-4fd8-a3eb-6e8db6d49ba8/deploy-status)](https://app.netlify.com/sites/pokedex-pokemons/deploys) ![Twitter Follow](https://img.shields.io/twitter/follow/iGazouly)
 
+# Pokémon React App (Pokédex)
+Pokédex is a pokémon dictionary that provides a detailed information related to pokémons, like their names, description, abilities, stats, height, weight, and much more. All data from [PokeAPI](https://pokeapi.co/) .
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pokédex was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -9,63 +11,32 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.<br />
+The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: if you want to fix  auto-fixable problems and errors just add `--fix` flag before you run this script**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+My basic configuration contains some rules such as: strings should be written inside single quotes rather than double quotes, disable console logs, prevent trailing commas. I could add more, but it's more common to find an existing set of rules that come close to what I want, then customize from there.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+So, I used Airbnb linting rules, which bills itself as "a mostly reasonable approach to JavaScript." And it's true: their linting rules are popular because they are simple, sensible, and beautifully consistent.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `yarn netlify:deploy`
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I used `netlify-cli` to configure my webapp deployment to Netlify PaaS. You can read more about this cli at [Netlify CLI](https://docs.netlify.com/cli/get-started/)
