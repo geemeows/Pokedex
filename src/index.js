@@ -7,10 +7,10 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <APIContextProvider>
-      <App />
-    </APIContextProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
+	<BrowserRouter>
+		<APIContextProvider>
+			<App />
+		</APIContextProvider>
+	</BrowserRouter>,
+	document.getElementById('root')
 )

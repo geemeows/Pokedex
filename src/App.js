@@ -14,18 +14,17 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const App = () => (
-  <>
-    <GlobalStyles />
-    <DefaultLayout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/pokemon" component={Pokemon} />
-        <Route path="/404" component={NotFound} />
-        <Redirect to="/404" />
-      </Switch>
-      {/* <Home /> */}
-    </DefaultLayout>
-  </>
+	<>
+		<GlobalStyles />
+		<DefaultLayout>
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route path='/pokemon' component={Pokemon} />
+				<Route path='/404' component={NotFound} />
+				<Redirect to='/404' />
+			</Switch>
+		</DefaultLayout>
+	</>
 )
 
 export default App
