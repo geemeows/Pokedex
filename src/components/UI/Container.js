@@ -5,6 +5,7 @@ import device from '@utils/responsive_helper'
 
 const UIContainer = styled.div`
 	margin: 0 auto;
+	width: 100%;
 	@media ${device.laptop} {
 		max-width: calc(100% - 200px);
 	}

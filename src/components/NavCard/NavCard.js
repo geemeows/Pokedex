@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import { Icon } from 'semantic-ui-react'
-import { PokemonCard as NavigationCard } from '../Card/PokemonCard'
+import NavigationCard from '@components/PokemonCard/styles'
 
 const CardBody = styled.div`
 	width: 100%;

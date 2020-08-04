@@ -9,7 +9,7 @@ import {
 } from 'semantic-ui-react'
 
 import Container from '@components/UI/Container'
-import PokemonCard from '@components/Card/PokemonCard'
+import PokemonCard from '@components/PokemonCard/PokemonCard'
 import NavCard from '@components/NavCard/NavCard'
 
 import { getPokemons } from '@services/pokemon.services'
@@ -25,7 +25,7 @@ const Home = () => {
 	const { push } = useHistory()
 
 	useEffect(() => {
-		;(async () => {
+		const fetchPokemons = async () => {
 			try {
 				setLoading(true)
 				const pokes = await getPokemons(offset, limit)
@@ -35,7 +35,8 @@ const Home = () => {
 				setLoading(false)
 				setError(err)
 			}
-		})()
+		}
+		fetchPokemons()
 	}, [offset, limit, setPokemons])
 
 	useEffect(() => {
@@ -63,6 +64,7 @@ const Home = () => {
 			}
 			return LoadingPokemons
 		}
+
 		const pokemonsList = pokemons.map(
 			({ id, name, images, weight, height }) => (
 				<Grid.Column key={id}>
@@ -77,6 +79,7 @@ const Home = () => {
 				</Grid.Column>
 			)
 		)
+
 		if (!error && pokemons.length) {
 			pokemonsList.push(
 				<React.Fragment key={new Date().toISOString()}>

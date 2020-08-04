@@ -12,10 +12,12 @@ const FooterContainer = styled.footer`
 
 const Footer = () => (
 	<FooterContainer>
-		Made with &nbsp;
-		<Icon name='heart' color='red' />
-		and &nbsp;
-		<Icon name='react' color='blue' />
+		<span className='footer-text'>
+			Made with &nbsp;
+			<Icon name='heart' color='red' />
+			and &nbsp;
+			<Icon name='react' color='blue' />
+		</span>
 	</FooterContainer>
 )
 
