@@ -1,4 +1,5 @@
-![Travis (.com)](https://img.shields.io/travis/com/Gazouly/Pokedex) [![Netlify Status](https://api.netlify.com/api/v1/badges/c0e27509-523c-4fd8-a3eb-6e8db6d49ba8/deploy-status)](https://app.netlify.com/sites/pokedex-pokemons/deploys) ![Twitter Follow](https://img.shields.io/twitter/follow/iGazouly)
+![Travis (.com)](https://img.shields.io/travis/com/Gazouly/Pokedex?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/Gazouly/Pokedex?style=for-the-badge) [![Website pokedex-pokemons.netlify.app](https://img.shields.io/website-up-down-green-red/http/pokedex-pokemons.netlify.app.svg?style=for-the-badge)](http://lbesson.bitbucket.org/) [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Gazouly/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
