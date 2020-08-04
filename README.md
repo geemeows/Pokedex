@@ -1,3 +1,5 @@
+![Travis (.com)](https://img.shields.io/travis/com/Gazouly/Pokedex) [![Netlify Status](https://api.netlify.com/api/v1/badges/c0e27509-523c-4fd8-a3eb-6e8db6d49ba8/deploy-status)](https://app.netlify.com/sites/pokedex-pokemons/deploys) ![Twitter Follow](https://img.shields.io/twitter/follow/iGazouly)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
