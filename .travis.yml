@@ -8,8 +8,8 @@ cache:
 before_script:
   - yarn
 after_success:
+  - yarn build
   - yarn netlify:deploy
 script:
   - yarn lint
   - yarn test
-  - yarn build

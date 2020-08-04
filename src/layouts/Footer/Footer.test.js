@@ -19,6 +19,6 @@ describe('<Footer />', () => {
 		).toEqual(true)
 		expect(
 			wrapper.find('.footer-text').contains(<Icon name='heart' color='red' />)
-		).toEqual(false)
+		).toEqual(true)
 	})
 })
