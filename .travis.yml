@@ -13,7 +13,3 @@ script:
   - yarn lint
   - yarn test
   - yarn build
-deploy:
-  provider: netlify
-  site: $NETLIFY_SITE_ID
-  auth: $NETLIFY_AUTH_TOKEN
