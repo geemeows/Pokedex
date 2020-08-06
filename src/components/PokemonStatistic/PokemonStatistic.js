@@ -5,8 +5,10 @@ import { Statistic } from 'semantic-ui-react'
 const Stat = ({ value, label, unit, color, long }) => {
 	return (
 		<Statistic className='static' color={color}>
-			<Statistic.Value>{value}</Statistic.Value>
-			<Statistic.Label className={long ? 'long-text' : null}>
+			<Statistic.Value className={long ? 'long-text' : null}>
+				{value}
+			</Statistic.Value>
+			<Statistic.Label>
 				{label}
 				{unit && <span className='unit'>({unit})</span>}
 			</Statistic.Label>

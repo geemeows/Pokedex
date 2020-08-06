@@ -54,12 +54,13 @@ const NavCard = ({ type, functionality, disabled }) => (
 		</CardBody>
 	</NavigationCard>
 )
+
 NavCard.defaultProps = {
 	disabled: false
 }
 
 NavCard.propTypes = {
-	type: PropTypes.string.isRequired,
+	type: PropTypes.oneOf(['prev', 'next']).isRequired,
 	functionality: PropTypes.func.isRequired,
 	disabled: PropTypes.bool
 }

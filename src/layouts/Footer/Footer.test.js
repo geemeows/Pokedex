@@ -8,12 +8,16 @@ import Footer from './Footer'
 configure({ adapter: new Adapter() })
 
 describe('<Footer />', () => {
+	let wrapper
+	beforeEach(() => {
+		wrapper = shallow(<Footer />)
+	})
+
 	it('Should contain copyrights text', () => {
-		const wrapper = shallow(<Footer />)
 		expect(wrapper.find('.footer-text')).toHaveLength(1)
 	})
+
 	it('Should contain Icons', () => {
-		const wrapper = shallow(<Footer />)
 		expect(
 			wrapper.find('.footer-text').contains(<Icon name='react' color='blue' />)
 		).toEqual(true)
